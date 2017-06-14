@@ -11,12 +11,14 @@
 // }
 function myFunction() {
 	var username = document.getElementById('username');
-    var checkuser = /([A-Za-z]){0,6}/g;
+    var checkuser = /[A-Za-z]{1,8}/g;
+    console.log(checkuser.test(username.value))
     if(!checkuser.test(username.value)) {
     	alert('ky tu qua dai');
     	username.focus;
-    	return false;
-    }else{
+    }
+    else
+    {
     	alert('dung roi');
     }
 }
